@@ -24,6 +24,25 @@
   "user_image",
   "sb1",
   "role_profile_name",
+  "pos_setting_section",
+  "pos_password",
+  "pos_synchronize_token",
+  "allow_start_cashier_shift",
+  "allow_open_cashdrawer",
+  "allow_view_close_receipt",
+  "allow_view_shift_report",
+  "allow_sale_return_transaction",
+  "column_break_18",
+  "allow_sale_discount",
+  "allow_item_discount",
+  "allow_delete_order_item",
+  "allow_delete_bill",
+  "allow_change_item_price",
+  "allow_change_item_unit",
+  "column_break_29",
+  "allow_reset_receipt_number_in_current_station",
+  "allow_reset_receipt_number_in_all_station",
+  "column_break_31",
   "roles_html",
   "roles",
   "short_bio",
@@ -124,6 +143,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "middle_name",
    "fieldtype": "Data",
    "label": "Middle Name (Optional)",
@@ -131,6 +151,7 @@
    "oldfieldtype": "Data"
   },
   {
+   "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "last_name",
    "fieldtype": "Data",
@@ -139,6 +160,7 @@
    "oldfieldtype": "Data"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -147,6 +169,7 @@
    "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "bold": 1,
    "default": "1",
    "depends_on": "eval:doc.__islocal",
@@ -155,6 +178,7 @@
    "label": "Send Welcome Email"
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "0",
    "fieldname": "unsubscribed",
    "fieldtype": "Check",
@@ -178,17 +202,20 @@
    "unique": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "language",
    "fieldtype": "Link",
    "label": "Language",
    "options": "Language"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "time_zone",
    "fieldtype": "Select",
    "label": "Time Zone"
   },
   {
+   "allow_in_quick_entry": 1,
    "description": "Get your globally recognized avatar from Gravatar.com",
    "fieldname": "user_image",
    "fieldtype": "Attach Image",
@@ -201,6 +228,7 @@
    "depends_on": "eval:in_list(['System User', 'Website User'], doc.user_type) && doc.enabled == 1",
    "fieldname": "sb1",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Roles",
    "permlevel": 1,
    "read_only": 1
@@ -213,12 +241,14 @@
    "permlevel": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "roles_html",
    "fieldtype": "HTML",
    "label": "Roles HTML",
    "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "roles",
    "fieldtype": "Table",
    "hidden": 1,
@@ -271,6 +301,7 @@
    "no_copy": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "banner_image",
    "fieldtype": "Attach Image",
    "label": "Banner Image"
@@ -280,17 +311,20 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "interest",
    "fieldtype": "Small Text",
    "label": "Interests"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "bio",
    "fieldtype": "Small Text",
    "label": "Bio",
    "no_copy": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "0",
    "fieldname": "mute_sounds",
    "fieldtype": "Check",
@@ -603,6 +637,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "desk_theme",
    "fieldtype": "Select",
    "label": "Desk Theme",
@@ -615,13 +650,13 @@
    "options": "Module Profile"
   },
   {
-    "description": "Stores the datetime when the last reset password key was generated.",
-    "fieldname": "last_reset_password_key_generated_on",
-    "fieldtype": "Datetime",
-    "hidden": 1,
-    "label": "Last Reset Password Key Generated On",
-    "read_only": 1
-   },
+   "description": "Stores the datetime when the last reset password key was generated.",
+   "fieldname": "last_reset_password_key_generated_on",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Last Reset Password Key Generated On",
+   "read_only": 1
+  },
   {
    "fieldname": "column_break_75",
    "fieldtype": "Column Break"
@@ -648,18 +683,121 @@
    "label": "Auto follow documents that you Like"
   },
   {
-    "default": "0",
-    "depends_on": "eval:(doc.document_follow_notify== 1)",
-    "fieldname": "follow_shared_documents",
-    "fieldtype": "Check",
-    "label": "Auto follow documents that are shared with you"
-   },
+   "default": "0",
+   "depends_on": "eval:(doc.document_follow_notify== 1)",
+   "fieldname": "follow_shared_documents",
+   "fieldtype": "Check",
+   "label": "Auto follow documents that are shared with you"
+  },
   {
    "default": "0",
    "depends_on": "eval:(doc.document_follow_notify== 1)",
    "fieldname": "follow_assigned_documents",
    "fieldtype": "Check",
    "label": "Auto follow documents that are assigned to you"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_reset_receipt_number_in_current_station",
+   "fieldtype": "Check",
+   "label": "Allow reset receipt number in current station"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_reset_receipt_number_in_all_station",
+   "fieldtype": "Check",
+   "label": "Allow reset receipt number in all station"
+  },
+  {
+   "fieldname": "pos_setting_section",
+   "fieldtype": "Section Break",
+   "label": "POS Setting"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pos_password",
+   "fieldtype": "Data",
+   "label": "POS Password"
+  },
+  {
+   "fieldname": "pos_synchronize_token",
+   "fieldtype": "Data",
+   "label": "POS Synchronize Token"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_start_cashier_shift",
+   "fieldtype": "Check",
+   "label": "Allow start cashier shift"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_open_cashdrawer",
+   "fieldtype": "Check",
+   "label": "Allow open cashdrawer"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_view_close_receipt",
+   "fieldtype": "Check",
+   "label": "Allow view close receipt"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_view_shift_report",
+   "fieldtype": "Check",
+   "label": "Allow view shift report"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_sale_return_transaction",
+   "fieldtype": "Check",
+   "label": "Allow sale return transaction"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_sale_discount",
+   "fieldtype": "Check",
+   "label": "Allow sale discount"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_item_discount",
+   "fieldtype": "Check",
+   "label": "Allow item discount"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_delete_order_item",
+   "fieldtype": "Check",
+   "label": "Allow delete order item"
+  },
+  {
+   "fieldname": "allow_delete_bill",
+   "fieldtype": "Data",
+   "label": "Allow delete bill"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_change_item_price",
+   "fieldtype": "Check",
+   "label": "Allow change item price"
+  },
+  {
+   "fieldname": "allow_change_item_unit",
+   "fieldtype": "Data",
+   "label": "Allow change item unit"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
   }
  ],
  "icon": "fa fa-user",
@@ -722,7 +860,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-05-25 01:00:51.345319",
+ "modified": "2022-07-09 16:21:39.981835",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
