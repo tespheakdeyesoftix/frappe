@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="generator" content="frappe">
 
 	{% block meta_block %}
@@ -56,43 +57,15 @@
 		}
 		window.dev_server = {{ dev_server }};
 		window.socketio_port = {{ (frappe.socketio_port or 'null') }};
-		window.show_language_picker = {{ show_language_picker or 'false' }};
+		
 	</script>
 </head>
-<body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {%- endif %} class="{{ body_class or ''}}">
-	{% include "public/icons/timeless/icons.svg" %}
-	{%- block banner -%}
-		{% include "templates/includes/banner_extension.html" ignore missing %}
-
-		{% if banner_html -%}
-		{{ banner_html or "" }}
-		{%- endif %}
+<body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {%- endif %} class="custom-bd {{ body_class or ''}}">
+	
+	{%- block page_content -%}
 	{%- endblock -%}
 
-	{%- block navbar -%}
-		{{ web_block(
-			navbar_template or 'Standard Navbar',
-			values=_context_dict,
-			add_container=0,
-			add_top_padding=0,
-			add_bottom_padding=0,
-		) }}
-	{%- endblock -%}
-
-	{% block content %}
-		{{ content }}
-	{% endblock %}
-
-	{%- block footer -%}
-		{{ web_block(
-			footer_template or 'Standard Footer',
-			values=_context_dict,
-			add_container=0,
-			add_top_padding=0,
-			add_bottom_padding=0
-		) }}
-	{%- endblock -%}
-
+ 
 	{% block base_scripts %}
 	<!-- js should be loaded in body! -->
 	<script>
@@ -119,5 +92,8 @@
 	{%- endblock %}
 	<!-- csrf_token -->
 	{%- block body_include %}{{ body_include or "" }}{% endblock -%}
+
 </body>
 </html>
+
+ 
