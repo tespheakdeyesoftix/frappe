@@ -208,17 +208,17 @@
    "type": "Link"
   }
  ],
- "modified": "2022-07-09 14:02:41.734492",
+ "modified": "2022-07-09 14:27:20.973205",
  "modified_by": "Administrator",
  "module": "Automation",
  "name": "Tools",
  "owner": "Administrator",
- "parent_page": "",
+ "parent_page": "Settings",
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 21.0,
+ "sequence_id": 25.0,
  "shortcuts": [
   {
    "label": "ToDo",
