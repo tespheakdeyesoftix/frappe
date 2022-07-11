@@ -11,6 +11,7 @@
   "details",
   "subject",
   "event_category",
+  "customer",
   "event_type",
   "color",
   "send_reminder",
@@ -63,7 +64,7 @@
    "fieldname": "event_category",
    "fieldtype": "Select",
    "label": "Event Category",
-   "options": "Event\nMeeting\nCall\nSent/Received Email\nOther"
+   "options": "Event\nMeeting\nCall\nSent/Received Email\nCustomer Birthdate\nOther"
   },
   {
    "fieldname": "event_type",
@@ -272,12 +273,18 @@
    "label": "Sender",
    "options": "Email",
    "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
   }
  ],
  "icon": "fa fa-calendar",
  "idx": 1,
  "links": [],
- "modified": "2022-05-12 05:43:27.935510",
+ "modified": "2022-07-11 10:18:04.458800",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Event",

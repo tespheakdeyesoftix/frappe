@@ -16,14 +16,14 @@
   "column_break0",
   "full_name",
   "username",
-  "column_break_11",
+  "user_type",
+  "role_profile",
+  "module_profile",
   "language",
   "time_zone",
   "send_welcome_email",
   "unsubscribed",
   "user_image",
-  "sb1",
-  "role_profile_name",
   "pos_setting_section",
   "pos_password",
   "pos_synchronize_token",
@@ -36,13 +36,11 @@
   "allow_sale_discount",
   "allow_item_discount",
   "allow_delete_order_item",
-  "allow_delete_bill",
   "allow_change_item_price",
-  "allow_change_item_unit",
+  "allow_delete_biil",
   "column_break_29",
   "allow_reset_receipt_number_in_current_station",
   "allow_reset_receipt_number_in_all_station",
-  "column_break_31",
   "roles_html",
   "roles",
   "short_bio",
@@ -81,7 +79,6 @@
   "allowed_in_mentions",
   "user_emails",
   "sb_allow_modules",
-  "module_profile",
   "modules_html",
   "block_modules",
   "home_settings",
@@ -93,7 +90,6 @@
   "last_ip",
   "column_break1",
   "login_after",
-  "user_type",
   "last_active",
   "section_break_63",
   "login_before",
@@ -137,7 +133,7 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name",
+   "label": "Full Name",
    "oldfieldname": "first_name",
    "oldfieldtype": "Data",
    "reqd": 1
@@ -146,23 +142,24 @@
    "allow_in_quick_entry": 1,
    "fieldname": "middle_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Middle Name (Optional)",
    "oldfieldname": "middle_name",
    "oldfieldtype": "Data"
   },
   {
-   "allow_in_quick_entry": 1,
    "bold": 1,
    "fieldname": "last_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Last Name",
    "oldfieldname": "last_name",
    "oldfieldtype": "Data"
   },
   {
-   "allow_in_quick_entry": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_global_search": 1,
    "in_standard_filter": 1,
    "label": "Full Name",
@@ -175,6 +172,7 @@
    "depends_on": "eval:doc.__islocal",
    "fieldname": "send_welcome_email",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Send Welcome Email"
   },
   {
@@ -205,6 +203,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "language",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Language",
    "options": "Language"
   },
@@ -212,6 +211,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "time_zone",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Time Zone"
   },
   {
@@ -223,22 +223,6 @@
    "label": "User Image",
    "no_copy": 1,
    "print_hide": 1
-  },
-  {
-   "depends_on": "eval:in_list(['System User', 'Website User'], doc.user_type) && doc.enabled == 1",
-   "fieldname": "sb1",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Roles",
-   "permlevel": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "role_profile_name",
-   "fieldtype": "Link",
-   "label": "Role Profile",
-   "options": "Role Profile",
-   "permlevel": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -398,6 +382,7 @@
    "depends_on": "enabled",
    "fieldname": "email_settings",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Email"
   },
   {
@@ -421,6 +406,7 @@
   {
    "fieldname": "email_signature",
    "fieldtype": "Small Text",
+   "hidden": 1,
    "label": "Email Signature",
    "no_copy": 1
   },
@@ -496,7 +482,6 @@
    "label": "Simultaneous Sessions"
   },
   {
-   "bold": 1,
    "default": "System User",
    "description": "If the user has any role checked, then the user becomes a \"System User\". \"System User\" has access to the desktop",
    "fieldname": "user_type",
@@ -504,10 +489,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "User Type",
-   "oldfieldname": "user_type",
-   "oldfieldtype": "Select",
-   "options": "User Type",
-   "permlevel": 1
+   "options": "User Type"
   },
   {
    "description": "Allow user to login only after this hour (0-24)",
@@ -625,10 +607,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_11",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_26",
    "fieldtype": "Column Break"
   },
@@ -701,10 +679,6 @@
    "fieldname": "allow_reset_receipt_number_in_current_station",
    "fieldtype": "Check",
    "label": "Allow reset receipt number in current station"
-  },
-  {
-   "fieldname": "column_break_31",
-   "fieldtype": "Column Break"
   },
   {
    "default": "0",
@@ -780,24 +754,26 @@
    "label": "Allow delete order item"
   },
   {
-   "fieldname": "allow_delete_bill",
-   "fieldtype": "Data",
-   "label": "Allow delete bill"
-  },
-  {
    "default": "0",
    "fieldname": "allow_change_item_price",
    "fieldtype": "Check",
    "label": "Allow change item price"
   },
   {
-   "fieldname": "allow_change_item_unit",
-   "fieldtype": "Data",
-   "label": "Allow change item unit"
-  },
-  {
    "fieldname": "column_break_29",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "role_profile",
+   "fieldtype": "Link",
+   "label": "Role Profile",
+   "options": "Role Profile"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_delete_biil",
+   "fieldtype": "Check",
+   "label": "Allow delete biil"
   }
  ],
  "icon": "fa fa-user",
@@ -860,7 +836,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-09 16:21:39.981835",
+ "modified": "2022-07-11 09:02:52.850679",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
