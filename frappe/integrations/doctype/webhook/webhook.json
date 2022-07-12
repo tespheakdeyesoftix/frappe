@@ -8,6 +8,7 @@
  "field_order": [
   "sb_doc_events",
   "naming_series",
+  "title",
   "webhook_doctype",
   "cb_doc_events",
   "webhook_docevent",
@@ -163,13 +164,19 @@
    "label": "Request Method",
    "options": "POST\nPUT\nDELETE",
    "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
   }
  ],
  "links": [],
- "modified": "2021-05-25 11:11:28.555291",
+ "modified": "2022-07-12 10:28:22.784302",
  "modified_by": "Administrator",
  "module": "Integrations",
  "name": "Webhook",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -187,6 +194,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "webhook_doctype",
  "track_changes": 1
 }

@@ -60,6 +60,8 @@ class File(Document):
 		self.set_file_name()
 		self.validate_attachment_limit()
 
+		
+
 		if self.is_folder:
 			return
 
@@ -78,6 +80,7 @@ class File(Document):
 		self.validate_duplicate_entry()
 
 	def validate(self):
+		
 		# Ensure correct formatting and type
 		self.file_url = unquote(self.file_url) if self.file_url else ""
 

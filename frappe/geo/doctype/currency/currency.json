@@ -16,7 +16,8 @@
   "smallest_currency_fraction_value",
   "symbol",
   "symbol_on_right",
-  "number_format"
+  "number_format",
+  "pos_currency_format"
  ],
  "fields": [
   {
@@ -76,13 +77,18 @@
    "fieldname": "symbol_on_right",
    "fieldtype": "Check",
    "label": "Show Currency Symbol on Right Side"
+  },
+  {
+   "fieldname": "pos_currency_format",
+   "fieldtype": "Data",
+   "label": "POS Currency Format"
   }
  ],
  "icon": "fa fa-bitcoin",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 09:42:52.425440",
+ "modified": "2022-07-12 09:58:52.755145",
  "modified_by": "Administrator",
  "module": "Geo",
  "name": "Currency",

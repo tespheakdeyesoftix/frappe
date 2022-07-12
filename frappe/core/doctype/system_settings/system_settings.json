@@ -461,7 +461,6 @@
    "description": "The application name will be used in the Login page.",
    "fieldname": "app_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Application Name"
   },
   {
@@ -597,7 +596,7 @@
  "image_field": "system_logo",
  "issingle": 1,
  "links": [],
- "modified": "2022-07-11 12:52:06.248202",
+ "modified": "2022-07-12 14:22:25.276745",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
