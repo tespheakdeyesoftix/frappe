@@ -56,6 +56,7 @@ class File(Document):
 			self.name = frappe.generate_hash(length=10)
 
 	def before_insert(self):
+		
 		self.set_folder_name()
 		self.set_file_name()
 		self.validate_attachment_limit()
@@ -73,6 +74,7 @@ class File(Document):
 			frappe.local.rollback_observers.append(self)
 
 	def after_insert(self):
+		
 		if not self.is_folder:
 			self.create_attachment_record()
 		self.set_is_private()
@@ -80,7 +82,6 @@ class File(Document):
 		self.validate_duplicate_entry()
 
 	def validate(self):
-		
 		# Ensure correct formatting and type
 		self.file_url = unquote(self.file_url) if self.file_url else ""
 
@@ -101,6 +102,7 @@ class File(Document):
 			setup_folder_path(successor, self.name)
 
 	def on_trash(self):
+	
 		if self.is_home_folder or self.is_attachments_folder:
 			frappe.throw(_("Cannot delete Home and Attachments folders"))
 		self.validate_empty_folder()
@@ -529,8 +531,7 @@ class File(Document):
 
 		file_exists = False
 		duplicate_file = None
-
-		self.is_private = cint(self.is_private)
+		self.is_private = 0 # cint(self.is_private)
 		self.content_type = mimetypes.guess_type(self.file_name)[0]
 
 		# transform file content based on site settings
