@@ -18,6 +18,7 @@
   "username",
   "user_type",
   "role_profile",
+  "role_profile_name",
   "module_profile",
   "language",
   "time_zone",
@@ -105,8 +106,7 @@
   "api_key",
   "generate_keys",
   "column_break_65",
-  "api_secret",
-  "data_100"
+  "api_secret"
  ],
  "fields": [
   {
@@ -778,7 +778,7 @@
   {
    "fieldname": "role_profile",
    "fieldtype": "Link",
-   "label": "Role Profile",
+   "label": "Role Profiles",
    "options": "Role Profile"
   },
   {
@@ -806,8 +806,10 @@
    "label": "Allow delete bill"
   },
   {
-   "fieldname": "data_100",
-   "fieldtype": "Data"
+   "fieldname": "role_profile_name",
+   "fieldtype": "Link",
+   "label": "Role Profile Name",
+   "options": "Role Profile"
   }
  ],
  "icon": "fa fa-user",
@@ -870,7 +872,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-13 15:15:28.500116",
+ "modified": "2022-07-13 15:37:40.872533",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
