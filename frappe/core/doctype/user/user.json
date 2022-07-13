@@ -25,24 +25,26 @@
   "unsubscribed",
   "user_image",
   "pos_setting_section",
+  "allow_login_to_pos",
   "pos_password",
   "pos_synchronize_token",
   "allow_start_cashier_shift",
   "allow_open_cashdrawer",
   "allow_view_close_receipt",
   "allow_view_shift_report",
+  "allow_close_cashier_shift",
   "allow_sale_return_transaction",
   "column_break_18",
   "allow_sale_discount",
   "allow_item_discount",
   "allow_delete_order_item",
   "allow_change_item_price",
-  "allow_delete_biil",
+  "allow_change_unit",
+  "allow_delete_bill",
   "column_break_29",
   "allow_reset_receipt_number_in_current_station",
   "allow_reset_receipt_number_in_all_station",
   "roles_html",
-  "roles",
   "short_bio",
   "gender",
   "birth_date",
@@ -55,6 +57,7 @@
   "bio",
   "mute_sounds",
   "column_break_22",
+  "roles",
   "mobile_no",
   "change_password",
   "new_password",
@@ -102,7 +105,8 @@
   "api_key",
   "generate_keys",
   "column_break_65",
-  "api_secret"
+  "api_secret",
+  "data_100"
  ],
  "fields": [
   {
@@ -228,11 +232,11 @@
    "allow_in_quick_entry": 1,
    "fieldname": "roles_html",
    "fieldtype": "HTML",
+   "hidden": 1,
    "label": "Roles HTML",
    "read_only": 1
   },
   {
-   "allow_in_quick_entry": 1,
    "fieldname": "roles",
    "fieldtype": "Table",
    "hidden": 1,
@@ -288,6 +292,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "banner_image",
    "fieldtype": "Attach Image",
+   "hidden": 1,
    "label": "Banner Image"
   },
   {
@@ -298,12 +303,14 @@
    "allow_in_quick_entry": 1,
    "fieldname": "interest",
    "fieldtype": "Small Text",
+   "hidden": 1,
    "label": "Interests"
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "bio",
    "fieldtype": "Small Text",
+   "hidden": 1,
    "label": "Bio",
    "no_copy": 1
   },
@@ -312,6 +319,7 @@
    "default": "0",
    "fieldname": "mute_sounds",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Mute Sounds"
   },
   {
@@ -361,6 +369,7 @@
    "collapsible": 1,
    "fieldname": "document_follow_notifications_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Document Follow"
   },
   {
@@ -422,6 +431,7 @@
    "depends_on": "eval:in_list(['System User'], doc.user_type)",
    "fieldname": "sb_allow_modules",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Allow Modules",
    "permlevel": 1
   },
@@ -556,7 +566,6 @@
    "description": "Stores the JSON of last known versions of various installed apps. It is used to show release notes.",
    "fieldname": "last_known_versions",
    "fieldtype": "Text",
-   "hidden": 1,
    "label": "Last Known Versions",
    "read_only": 1
   },
@@ -565,6 +574,7 @@
    "depends_on": "enabled",
    "fieldname": "third_party_authentication",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Third Party Authentication",
    "permlevel": 1
   },
@@ -618,6 +628,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "desk_theme",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Desk Theme",
    "options": "Light\nDark\nAutomatic"
   },
@@ -689,7 +700,8 @@
   {
    "fieldname": "pos_setting_section",
    "fieldtype": "Section Break",
-   "label": "POS Setting"
+   "label": "POS Setting",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_18",
@@ -771,9 +783,31 @@
   },
   {
    "default": "0",
-   "fieldname": "allow_delete_biil",
+   "fieldname": "allow_login_to_pos",
    "fieldtype": "Check",
-   "label": "Allow delete biil"
+   "label": "Allow login to POS"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_close_cashier_shift",
+   "fieldtype": "Check",
+   "label": "Allow close cashier shift"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_change_unit",
+   "fieldtype": "Check",
+   "label": "Allow Change Unit"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_delete_bill",
+   "fieldtype": "Check",
+   "label": "Allow delete bill"
+  },
+  {
+   "fieldname": "data_100",
+   "fieldtype": "Data"
   }
  ],
  "icon": "fa fa-user",
@@ -836,7 +870,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-11 09:02:52.850679",
+ "modified": "2022-07-13 15:15:28.500116",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -867,7 +901,6 @@
    "select": 1
   }
  ],
- "quick_entry": 1,
  "route": "user",
  "search_fields": "full_name",
  "show_name_in_global_search": 1,
