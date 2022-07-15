@@ -43,6 +43,7 @@
   "allow_change_unit",
   "allow_delete_bill",
   "allow_switch_pos_profile",
+  "allow_change_price_list_rate",
   "column_break_29",
   "allow_reset_receipt_number_in_current_station",
   "allow_reset_receipt_number_in_all_station",
@@ -817,6 +818,12 @@
    "fieldname": "allow_switch_pos_profile",
    "fieldtype": "Check",
    "label": "Allow Switch POS Profile"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_change_price_list_rate",
+   "fieldtype": "Check",
+   "label": "Allow Change Price List Rate"
   }
  ],
  "icon": "fa fa-user",
@@ -879,7 +886,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-15 16:53:20.543084",
+ "modified": "2022-07-15 17:07:22.247659",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
