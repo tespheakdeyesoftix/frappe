@@ -52,10 +52,11 @@
   }
  ],
  "links": [],
- "modified": "2020-05-12 18:27:15.568199",
+ "modified": "2022-07-20 19:02:25.773651",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "List View Settings",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -67,10 +68,35 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin User",
+   "share": 1,
+   "write": 1
   }
  ],
  "read_only": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
