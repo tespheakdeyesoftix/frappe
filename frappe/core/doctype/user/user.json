@@ -231,10 +231,8 @@
    "print_hide": 1
   },
   {
-   "allow_in_quick_entry": 1,
    "fieldname": "roles_html",
    "fieldtype": "HTML",
-   "hidden": 1,
    "label": "Roles HTML",
    "read_only": 1
   },
@@ -433,7 +431,6 @@
    "depends_on": "eval:in_list(['System User'], doc.user_type)",
    "fieldname": "sb_allow_modules",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Allow Modules",
    "permlevel": 1
   },
@@ -446,7 +443,6 @@
   {
    "fieldname": "block_modules",
    "fieldtype": "Table",
-   "hidden": 1,
    "label": "Block Modules",
    "options": "Block Module",
    "permlevel": 1
@@ -483,6 +479,7 @@
    "depends_on": "enabled",
    "fieldname": "sb3",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Security Settings",
    "oldfieldtype": "Section Break",
    "read_only": 1
@@ -886,7 +883,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-15 17:07:22.247659",
+ "modified": "2022-07-20 14:22:03.866356",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
