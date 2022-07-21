@@ -30,7 +30,7 @@ def get_permission_query_conditions(user):
 		return
 
 	roles = frappe.get_roles(user)
-	if "System Manager" in roles:
+	if "System Manager" in roles or "Stock Manager" in roles:
 		return None
 
 	doctype_condition = False
@@ -76,7 +76,7 @@ def get_permission_query_conditions(user):
 
 def has_permission(doc, ptype, user):
 	roles = frappe.get_roles(user)
-	if "System Manager" in roles:
+	if "System Manager" in roles or "Stock Manager" in roles:
 		return True
 
 	if doc.chart_type == "Report":

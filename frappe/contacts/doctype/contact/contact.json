@@ -250,7 +250,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-08-27 14:12:09.906719",
+ "modified": "2022-07-21 15:24:08.982996",
  "modified_by": "Administrator",
  "module": "Contacts",
  "name": "Contact",
@@ -377,9 +377,20 @@
    "permlevel": 1,
    "read": 1,
    "report": 1,
-   "role": "All"
+   "role": "All",
+   "select": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "ASC"
+ "sort_order": "ASC",
+ "states": []
 }

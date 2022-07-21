@@ -35,7 +35,7 @@
   }
  ],
  "links": [],
- "modified": "2022-07-21 11:58:47.851657",
+ "modified": "2022-07-21 15:00:05.417106",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Dashboard Chart Source",
@@ -74,6 +74,14 @@
    "role": "All",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1
   }
  ],
  "sort_field": "modified",

@@ -280,7 +280,7 @@
   }
  ],
  "links": [],
- "modified": "2022-07-21 11:58:47.410066",
+ "modified": "2022-07-21 17:39:23.726848",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Dashboard Chart",
@@ -308,18 +308,6 @@
    "read": 1,
    "report": 1,
    "role": "Dashboard Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
    "share": 1,
    "write": 1
   }
