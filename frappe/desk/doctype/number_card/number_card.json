@@ -191,8 +191,8 @@
    "options": "Sum\nAverage\nMinimum\nMaximum"
   },
   {
-   "description": "The document type selected is a child table, so the parent document type is required.",
    "depends_on": "eval: doc.type === 'Document Type'",
+   "description": "The document type selected is a child table, so the parent document type is required.",
    "fieldname": "parent_document_type",
    "fieldtype": "Link",
    "label": "Parent Document Type",
@@ -200,7 +200,7 @@
   }
  ],
  "links": [],
- "modified": "2022-06-12 15:34:38.210910",
+ "modified": "2022-07-21 11:58:14.318546",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Number Card",

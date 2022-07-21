@@ -20,7 +20,7 @@
  "icon": "fa fa-cog",
  "idx": 1,
  "links": [],
- "modified": "2022-06-13 05:34:37.845368",
+ "modified": "2022-07-21 11:58:15.365944",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Patch Log",
@@ -29,6 +29,7 @@
  "permissions": [
   {
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,

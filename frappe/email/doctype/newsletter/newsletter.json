@@ -236,7 +236,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2022-03-09 01:48:16.741603",
+ "modified": "2022-07-21 11:57:50.289062",
  "modified_by": "Administrator",
  "module": "Email",
  "name": "Newsletter",
@@ -259,6 +259,7 @@
  "route": "newsletters",
  "sort_field": "modified",
  "sort_order": "ASC",
+ "states": [],
  "title_field": "subject",
  "track_changes": 1
 }

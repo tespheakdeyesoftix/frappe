@@ -172,7 +172,7 @@
  ],
  "in_create": 1,
  "links": [],
- "modified": "2022-05-12 13:00:03.925605",
+ "modified": "2022-07-21 11:58:53.477748",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Workspace",
@@ -187,18 +187,9 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Workspace Manager",
+   "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
-   "share": 1
   }
  ],
  "sort_field": "modified",

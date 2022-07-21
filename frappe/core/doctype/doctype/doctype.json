@@ -680,7 +680,7 @@
    "link_fieldname": "reference_doctype"
   }
  ],
- "modified": "2022-02-28 21:56:52.116915",
+ "modified": "2022-07-21 12:45:09.779720",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "DocType",
@@ -691,6 +691,7 @@
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -701,6 +702,7 @@
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
