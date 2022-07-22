@@ -885,7 +885,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-07-22 12:35:46.643644",
+ "modified": "2022-07-22 18:58:02.465472",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -916,6 +916,19 @@
    "export": 1,
    "role": "All",
    "select": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "route": "user",
