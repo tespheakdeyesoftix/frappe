@@ -123,7 +123,7 @@
    "link_fieldname": "module"
   }
  ],
- "modified": "2022-01-03 13:56:52.817954",
+ "modified": "2022-07-22 19:09:58.071150",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Module Def",
@@ -152,10 +152,13 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "read": 1,
    "report": 1,
    "role": "All",
-   "select": 1
+   "select": 1,
+   "write": 1
   }
  ],
  "show_name_in_global_search": 1,

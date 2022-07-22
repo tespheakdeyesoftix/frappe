@@ -596,7 +596,7 @@
  "image_field": "system_logo",
  "issingle": 1,
  "links": [],
- "modified": "2022-07-12 14:22:25.276745",
+ "modified": "2022-07-22 19:06:33.627882",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
@@ -606,6 +606,15 @@
    "create": 1,
    "read": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "read": 1,
+   "role": "All",
    "share": 1,
    "write": 1
   }
